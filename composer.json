@@ -1,0 +1,48 @@
+{
+  "name": "dmitrypro77/tinysrc-php-sdk",
+  "description": "PHP SDK for TinySRC",
+  "version": "1.0.0",
+  "type": "project",
+  "authors": [
+    {
+      "name": "Dmitry Budoragin",
+      "homepage": "https://github.com/dmitrypro77/tinysrc-php-sdk"
+    }
+  ],
+  "keywords": [
+    "tinysrc",
+    "short url",
+    "tiny url",
+    "shortener url"
+  ],
+  "license": "MIT",
+  "require": {
+    "php": ">=7.3",
+    "ext-json": "*",
+    "jms/serializer": "^3.10.0",
+    "nyholm/psr7": "^1.2",
+    "psr/http-client": "^1.0",
+    "guzzlehttp/guzzle": "^7.2"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^9",
+    "php-http/mock-client": "^1.3",
+    "squizlabs/php_codesniffer": "*",
+    "symfony/http-client": "^4.3"
+  },
+  "autoload": {
+    "psr-4": {
+      "Tinysrc\\": "src/Tinysrc"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Tinysrc\\Tests\\": "tests/"
+    }
+  },
+  "scripts": {
+    "test": "./vendor/bin/phpunit  --colors=always",
+    "check-style": "./vendor/bin/phpcs --standard=PSR12 src/ tests/",
+    "fix-style": "./vendor/bin/phpcbf --standard=PSR12 src/ tests/"
+  }
+}

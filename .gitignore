@@ -1,0 +1,12 @@
+vendor/
+
+# PHPUnit
+/phpunit.xml
+
+# Composer PHAR
+/composer.lock
+/.idea
+
+# Stuff
+.phpunit.result.cache
+.phpunit_cs.cache
